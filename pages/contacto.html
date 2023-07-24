@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria Benchu</title>
+    <link rel="shortcut icon" href="../multimedia/logo-benchu.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navegador">
+            <ul>
+                <li><a href="../index.html"><img class="inicio-logo" src="../multimedia/logo-benchu.png" alt="inicio"></a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn " type="submit"><img src="../multimedia/search.png" alt="buscar"></button>
+                </form>
+                <li><a href="./carrito.html"><img class="carrito-img" src="../multimedia/carrito-logo.png" alt="carrito"></a></li>
+            </ul>
+        </nav>
+        <h1>Contacto</h1>
+    </header>
+
+    <main>
+        <h2 class="subtitulo-contacto">Contactanos</h2>
+        <div class="container-contactanos">
+            <div class="info-contacto">
+                <h6><img src="../multimedia/telefono-logo.png" alt="telefono">11 4475-6360</h6>
+                <h6><img src="../multimedia/location.png" alt="ubicacion">Calle 208 N°268 - Berazategui</h6>
+                <h6><img class="email-logo" src="../multimedia/email-logo.png" alt="Email">pasteleria.benchu@gmail.com</h6>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.064119468245!2d-58.228677023422755!3d-34.804328668122125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a329aa08723c71%3A0x7fd3fb3d09ead9c8!2sPasteler%C3%ADa%20Benchu!5e0!3m2!1ses-419!2sar!4v1689022324728!5m2!1ses-419!2sar"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <form class="formulario" method="post" name="formulario-contactanos">
+                <label for="nombre">Nombre :</label>
+                <input type="text"  name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                <label for="telefono">Telefono : </label>
+                <input type="number" name="telefono" id="telefono" placeholder="11 1234-1234">
+                <label for="email">Email : </label>
+                <input type="email" name="email" id="email" placeholder="pasteleria.benchu@gmail.com">
+                <label for="comentario">Comentario :</label>
+                <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+                <input class="enviar" type="submit" name="enviar" id="enviar">
+            </form>
+        </div>
+       
+    </main>
+    <footer class="pie-pagina">
+        <ul class="pie-navegacion">Navegacion
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./carrito.html">Carrito</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+        <ul class="pie-contacto">Contacto
+            <li><img src="../multimedia/email-logo.png" alt="correo">@pasteleria_benchu</li>
+            <li><img src="../multimedia/telefono-logo.png" alt="telefono">11 4475-6360</li>
+            <li><img src="../multimedia/location.png" alt="direccion">Calle 208 N°268</li>
+        </ul>
+        <ul class="pie-medios-pago">Medios de pago
+            <li><img src="../multimedia/visa.png" alt="visa"></li>
+            <li><img src="../multimedia/mastercard.png" alt="mastercard"></li>
+            <li><img src="../multimedia/mercadopago.png" alt="mercadopago"></li>
+        </ul>
+        <ul class="pie-redes">Redes
+            <li><a href="https://www.instagram.com/pasteleria_benchu" target="_blank"><img src="../multimedia/instagram.png" alt="Instagram"></a></li>
+            <li><a href=""><img src="../multimedia/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://api.whatsapp.com/send/?phone=5491144756360&text&type=phone_number&app_absent=0" target="_blank"><img src="../multimedia/whatsapp.png" alt="Whatsapp"></a></li>
+        </ul>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
