@@ -28,26 +28,70 @@
     </header>
 
     <main>
-        <div class="container-carro">
-            <div class="product-carro">
-                <img src="../multimedia/torta-brownie.jpeg" alt="torta brownie">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cum.</p>
-                <h3 class="price">$8500</h3>
-                <div class="cantidad-product">
-                    <button>-</button>
-                    <button>+</button>
-                    <input type="image" src="../multimedia/trash.png">
+        <div class="pasos-compra">
+            <ol>
+                <h4 class="principal">Productos seleccionados</h4>
+                <h3>Detalles de envio</h3>
+                <h3>Forma de pago</h3>
+            </ol>
+        </div>
+        <h2>Productos seleccionados</h2> 
+        <div class="contenedor-carro">
+            <div class="contenedor-producto-carro">           
+                <div class="producto-carro">
+                    <div class="producto-carro-descripcion">
+                        <img src="../multimedia/torta-brownie.jpeg" alt="torta brownie">
+                        <div>
+                            <h5>Torta brownie</h5>
+                            <p>Crema y dulce de leche 24cm</p>
+                            <strong>$10000</strong>
+                        </div>
+                        <div class="cantidad-producto-carro">
+                            <input class="number" placeholder="1" type="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="contenedor-producto-carro">
+                    <div class="producto-carro-descripcion">
+                        <img src="../multimedia/torta-brownie.jpeg" alt="torta brownie">
+                        <div>
+                            <h5>Torta brownie</h5>
+                            <p>Crema y dulce de leche 24cm</p>
+                            <strong>$10000</strong>
+                        </div>
+                        <div class="cantidad-producto-carro">
+                            <input class="number" placeholder="1" type="number">
+                        </div>
+                    </div>
+                </div>
+            </div>       
+            <div class="suma-carro">
+                <h4>Suma total</h4>
+                <input class="cupon-descuento" placeholder="Codigo de descuento" type="text">
+                <div class="contenedor-subtotal">
+                    <div class="texto-carro">
+                        <h6>Subtotal</h6>
+                        <h6>Envio</h6>
+                        <h6>Impuestos</h6>
+                    </div>
+                    <div class="precio-carro">
+                        <h6>$9000</h6>
+                        <h6>$500</h6>
+                        <h6>$500</h6>
+                    </div>
+                </div>
+                <div class="total-carro">
+                    <h3>TOTAL</h3>
+                    <H3><strong>$10000</strong></H3>
                 </div>
             </div>
-            <div class="total-carro">
-                <h3>Torta Brownie</h3>
-                <h4>Producto: $8500</h4>
-                <h4>Envio: $500</h4>
-                <h4>Total: $9000</h4>
-                <button class="comprar">Comprar</button>
-            </div>
+        </div>
+        <div class="siguiente-carro">
+            <button>Siguiente</button>
+            <button>Cancelar</button>
         </div>
     </main>
+
     <footer class="pie-pagina">
         <div class="container-footer">
             <ul class="pie-navegacion">Navegacion
@@ -56,7 +100,7 @@
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
             <ul class="pie-contacto">Contacto
-                <li><img src="../multimedia/email-logo.png" alt="correo">@pasteleria_benchu</li>
+                <li><img src="../multimedia/email-logo.png" alt="correo"> pasteleria-benchu@gmail.com</li>
                 <li><img src="../multimedia/telefono-logo.png" alt="telefono">11 4475-6360</li>
                 <li><img src="../multimedia/location.png" alt="direccion">Calle 208 N°268</li>
             </ul>
