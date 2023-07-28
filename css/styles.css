@@ -13,28 +13,32 @@ h1{
 .navegador {
     width: 100%;
     background-color: #F6BE8B;
+    display: flex;
+    justify-content: space-between;
 }
 .navegador ul {
+    width: 800px;
     display: flex;
     list-style: none;
     align-items: center;
-    padding: 2px;
     justify-content: space-around;
+    padding: 2px;
     margin-bottom: 0px;
 }
-.navegador ul form input{
+
+.navegador form input{
     width: 300px;
 }
-.navegador ul form input:hover{
+.navegador form input:hover{
     border: none;
 }
-.navegador ul form input:focus{
+.navegador form input:focus{
     border: none;
 }
-.navegador ul form button{
+.navegador form button{
     border: 1px solid #333;
 }
-.navegador ul form button:hover{
+.navegador form button:hover{
     background-color: #f2a664;
     border: 1px solid #333;
 }
@@ -49,7 +53,37 @@ h1{
 }
 .inicio-logo {
     width: 65px;
+    margin: 5px;
 }
+@media(max-width:768px){
+    .navegador{
+        border-bottom: 1px solid #333;
+    }
+    .navegador ul {
+        position: fixed;
+        top: 0;
+        left: -500px;
+        width: 40vw;
+        height: 100vh;
+        flex-direction: column;
+        padding-top: 25px;
+        justify-content: start;
+        background-color: #F6BE8B;
+        box-shadow: 8px 11px 25px -10px rgba(0,0,0,0.71);
+        -webkit-box-shadow: 8px 11px 25px -10px rgba(0,0,0,0.71);
+        -moz-box-shadow: 8px 11px 25px -10px rgba(0,0,0,0.71);
+    }
+    .navegador ul form input{
+        display: none;
+    }
+    .navegador ul form button{
+        display: none;
+    }
+    #carouselExampleControls{
+        display: none;
+    }
+}
+
 /*...Fin NAV*/
 #carouselExampleControls{
     border: 1px solid #999;
@@ -382,18 +416,17 @@ h1{
 /*..Fin MAIN*/
 
 /*FOOTER*/
-.container-footer{
+.contenedor-footer{
     background-color: #E1DBA0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     margin-top: 40px;
+    text-align: center;
 }
 .pie-pagina ul{
     list-style: none;
-    width: 280px;
-    padding-left: 0px;
+    padding-left: 25px;
     margin-bottom: 0px;
 }
 .pie-navegacion li{
@@ -419,7 +452,16 @@ h1{
     width: 37px;
     margin-top: 5px;
 }
+
 /*...Fin FOOTER*/
+
+.whatsapp{
+    position: fixed;
+    bottom: 150px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+}
 
 /*MEDIA*/
 
@@ -427,11 +469,6 @@ h1{
 
 }
 
-@media(max-width:768px){
-    .navegador .full{
-        display: none;
-    }
-}
 
 @media(max-width:992px){
     
