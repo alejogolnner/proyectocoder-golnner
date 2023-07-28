@@ -205,6 +205,7 @@ h1{
 /*Main carrito*/
 .contenedor-carro{
     display: flex;
+    justify-content: space-around;
 }
 .pasos-compra{
     width: 100%;
@@ -217,21 +218,94 @@ h1{
     padding: 0px 60px;
 }
 .pasos-compra ol .principal{
+    font-size: 34px;
     border-bottom: 1px solid #000000;
 }
 .pasos-compra ol h3{
+    font-size: 34px;
     border-bottom: 1px solid rgba(82, 82, 82, 0.479);
     color: rgba(82, 82, 82, 0.479);
 }
+.contenedor-producto-carro{
+    border-bottom: 1px solid #333;
+}
+.contenedor-producto-carro h2{
+    margin-bottom: 40px;
+    font-size: 28px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
 .producto-carro-descripcion{
     display: flex;
+    margin-bottom: 30px;
+}
+.producto-carro-descripcion img{
+    width: 90px;
+    height: 100px;
+    object-fit: cover;
+}
+.descripcion-texto-carro h5{
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.descripcion-texto-carro p{
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.descripcion-texto-carro strong{
+    padding-left: 20px;
+}
+.cantidad-producto-carro{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+.cantidad-producto-carro .number{
+    text-align: center;
+    width: 50px;
+    height: 28px;
 }
 .contenedor-subtotal{
     display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
 }
 .total-carro{
     display: flex;
+    justify-content: space-between;
 }
+.siguiente-carro{
+    margin: 20px 280px;
+}
+.siguiente-carro button{
+    width: 200px;
+    background-color: #F6BE8B;
+    border: 1px solid #333;
+    font-size: 24px;
+}
+.siguiente-carro button:hover{
+    background-color: #f2a664;
+}
+.suma-carro h4{
+    width: 300px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+.suma-carro input{
+    width: 100%;
+    padding-bottom: 10px;
+    border: none;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+.suma-carro input:focus{
+    outline: none;
+}
+
 
 /*... FIN main carrito*/
 
