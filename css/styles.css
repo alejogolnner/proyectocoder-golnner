@@ -13,19 +13,19 @@ h1{
 .navegador {
     width: 100%;
     background-color: #F6BE8B;
-    display: flex;
-    justify-content: space-between;
+}
+.nav-mobile{
+    display: none;
 }
 .navegador ul {
-    width: 800px;
     display: flex;
     list-style: none;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0rem 2rem;
     padding: 2px;
     margin-bottom: 0px;
 }
-
 .navegador form input{
     width: 300px;
 }
@@ -56,9 +56,6 @@ h1{
     margin: 5px;
 }
 @media(max-width:768px){
-    .navegador{
-        border-bottom: 1px solid #333;
-    }
     .navegador ul {
         position: fixed;
         top: 0;
@@ -73,11 +70,17 @@ h1{
         -webkit-box-shadow: 8px 11px 25px -10px rgba(0,0,0,0.71);
         -moz-box-shadow: 8px 11px 25px -10px rgba(0,0,0,0.71);
     }
-    .navegador ul form input{
-        display: none;
+    .nav-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    .navegador ul form button{
-        display: none;
+    .navegador .menu{
+        padding: 10px;
+    }
+    .navegador .form-mobile{
+        display: flex;
+        padding: 10px;
     }
     #carouselExampleControls{
         display: none;
@@ -479,5 +482,9 @@ h1{
 }
 
 @media(max-width:1400px){
+    
+}
+
+@media(max-width:2500px){
     
 }

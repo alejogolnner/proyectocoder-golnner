@@ -14,13 +14,20 @@
 </head>
 <body class="cuerpo">
     <nav class="navegador">
-        <a href="./index.html"><img class="inicio-logo" src="./multimedia/logo-benchu.png" alt="inicio"></a>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn " type="submit"><img src="./multimedia/search.png" alt="buscar"></button>
-        </form>
+        <div class="nav-mobile">
+            <img class="menu" src="./multimedia/menu.png" alt="menu">
+            <form class="form-mobile" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn " type="submit"><img src="./multimedia/search.png" alt="buscar"></button>
+            </form>
+        </div>
         <ul>
+            <li><a href="./index.html"><img class="inicio-logo" src="./multimedia/logo-benchu.png" alt="inicio"></a></li>
             <li ><a href="./pages/contacto.html">Contacto</a></li>
+            <li><form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn " type="submit"><img src="./multimedia/search.png" alt="buscar"></button>
+            </form></li>
             <li><a href="./pages/carrito.html"><img class="carrito-img" src="./multimedia/carrito-logo.png" alt="carrito"></a></li>
         </ul>
     </nav>
