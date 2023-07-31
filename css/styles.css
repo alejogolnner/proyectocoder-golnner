@@ -44,8 +44,10 @@ h1{
 }
 .navegador ul li a {
     text-decoration: none;
-    font-size: 16px;
     color: #000000;
+}
+.navegador ul li a h6{
+    font-size: 18px;
 }
 .carrito-img {
     width: 30px;
@@ -55,20 +57,56 @@ h1{
     width: 65px;
     margin: 5px;
 }
+.navegador .form-mobile{
+    display: none;
+}
+.navegador .menu{
+    display: none;
+}
+.navegador ul li a .carro-txt{
+    display: none;
+}
 @media(max-width:768px){
+    .navegador{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 15px;
+    }
+    .form-desk{
+        display: none;
+    }
+    .navegador ul li a .carrito-img{
+        display: none;
+    }
+    .navegador ul li a .carro-txt{
+        display: block;
+    }
     .navegador ul {
         position: fixed;
         top: 0;
         left: -500px;
-        width: 40vw;
+        width: 50vw;
         height: 100vh;
         flex-direction: column;
-        padding-top: 25px;
         justify-content: start;
         background-color: #F6BE8B;
         box-shadow: 8px 11px 25px -10px rgba(0,0,0,0.71);
         -webkit-box-shadow: 8px 11px 25px -10px rgba(0,0,0,0.71);
         -moz-box-shadow: 8px 11px 25px -10px rgba(0,0,0,0.71);
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .navegador ul li a{
+        margin-top: 40px;
+        font-size: 24px;
+    }
+    .navegador ul li a h6{
+        margin-top: 40px;
+        font-size: 24px;
+    }
+    .navegador ul li a img{
+        margin-top: 20px;
     }
     .nav-mobile{
         display: flex;
@@ -76,14 +114,27 @@ h1{
         justify-content: space-between;
     }
     .navegador .menu{
+        display: block;
         padding: 10px;
+        order: -1;
+    }
+    .navegador .menu:hover + ul{
+        left: 0;
+        margin: 0;
+    }
+    .navegador ul:hover{
+        left: 0;
+        margin: 0;
     }
     .navegador .form-mobile{
         display: flex;
         padding: 10px;
     }
-    #carouselExampleControls{
-        display: none;
+    
+}
+@media(max-width:576px){
+    .form-mobile{
+        width: 80vw;
     }
 }
 
@@ -145,6 +196,9 @@ h1{
     width: 400px;
     padding: 2px;
     margin: 0px;
+}
+@media(max-width:576px){
+    
 }
 /*...Fin main index*/
 
@@ -429,8 +483,8 @@ h1{
 }
 .pie-pagina ul{
     list-style: none;
-    padding-left: 25px;
     margin-bottom: 0px;
+    font-weight: bold;
 }
 .pie-navegacion li{
     margin-top: 15px;
@@ -446,7 +500,10 @@ h1{
     width: 50px;
     margin-top: 6px;
 }
-.pie-pagina ul li a{
+.contenedor-footer ul li{
+    font-weight: 300;
+}
+.contenedor-footer ul li a{
     text-decoration: none;
     color: #000000;
 }
@@ -455,7 +512,24 @@ h1{
     width: 37px;
     margin-top: 5px;
 }
-
+@media(max-width:992px){
+    .contenedor-footer{
+        grid-template-columns: 1fr 1fr;
+        text-align: start;
+    }
+    .contenedor-footer .pie-navegacion, .pie-contacto{
+        margin-bottom: 20px;
+    }
+}
+@media(max-width:576px){
+    .contenedor-footer{
+        grid-template-columns: 1fr;
+        text-align: start;
+    }
+    .contenedor-footer ul{
+        margin-bottom: 20px;
+    }
+}
 /*...Fin FOOTER*/
 
 .whatsapp{
@@ -469,7 +543,7 @@ h1{
 /*MEDIA*/
 
 @media(max-width:576px){
-
+    
 }
 
 

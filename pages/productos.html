@@ -14,14 +14,20 @@
 <body>
     <header>
         <nav class="navegador">
-            <ul>
+            <form class="form-mobile" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn " type="submit"><img src="../multimedia/search.png" alt="buscar"></button>
+            </form>
+            <img class="menu" src="../multimedia/menu.png" alt="menu">
+            <ul class="list-nav">
                 <li><a href="../index.html"><img class="inicio-logo" src="../multimedia/logo-benchu.png" alt="inicio"></a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn" type="submit"><img src="../multimedia/search.png" alt="buscar"></button>
-                </form>
-                <li><a href="./carrito.html"><img class="carrito-img" src="../multimedia/carrito-logo.png" alt="carrito"></a></li>
+                <li ><a href="./contacto.html"><h6>Contacto</h6></a></li>
+                <li class="form-desk"><form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn " type="submit"><img src="../multimedia/search.png" alt="buscar"></button>
+                    </form>
+                </li>
+                <li><a href="./carrito.html"><h6 class="carro-txt">Carrito</h6><img class="carrito-img" src="../multimedia/carrito-logo.png" alt="carrito"></a></li>
             </ul>
         </nav>
         <h1>Productos</h1>
