@@ -1,0 +1,23 @@
+.container-contactanos{
+    display: flex;
+    justify-content: center;
+}
+.info-contacto{
+    border: 1px solid #333;
+    width: 500px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 25px;
+    .email-logo{
+        width: 24px;
+    }
+    h6{
+        display: flex;
+        justify-items: start;
+        padding: 10px 15px;
+    }
+    iframe{
+        width: 470px;
+        height: 300px;
+    }
+}

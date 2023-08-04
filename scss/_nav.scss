@@ -1,0 +1,60 @@
+.navegador {
+    width: 100%;
+    background-color: #F6BE8B;
+    ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0rem 2rem;
+        padding: 2px;
+        margin-bottom: 0px;
+        li{
+            a{
+                text-decoration: none;
+                color: #000000;
+                h6{
+                    font-size: 18px;
+                }
+                .carro-txt{
+                    display: none;
+                }
+            }
+        }
+    }
+    form {
+        input{
+            width: 300px;
+            &:hover{
+                border: none;
+            }
+            &:focus{
+                border: none;
+            }
+        }
+        button{
+            border: 1px solid #333;
+            &:hover{
+                background-color: #f2a664;
+                border: 1px solid #333;
+            }
+        }
+    }
+    .form-mobile{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+}
+.nav-mobile{
+    display: none;
+}
+.carrito-img {
+    width: 30px;
+    height: auto;
+}
+.inicio-logo {
+    width: 65px;
+    margin: 5px;
+}

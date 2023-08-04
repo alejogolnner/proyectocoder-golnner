@@ -1,0 +1,30 @@
+.contenedor-subtotal{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+}
+.suma-carro {
+    h4{
+        width: 300px;
+        margin-bottom: 40px;
+        font-size: 28px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #333;
+    }
+    input{
+        width: 100%;
+        padding-bottom: 10px;
+        border: none;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #333;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+.total-carro{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,19 @@
+.container-subtitulo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+.subtitulo{
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    width: 400px;
+    padding: 2px;
+    margin: 0px;
+}
+.subtitulo-contacto{
+    margin-top: 1rem;
+    font-size: 35px;
+    text-align: center;
+}

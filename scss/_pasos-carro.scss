@@ -1,0 +1,19 @@
+.pasos-compra{
+    width: 100%;
+    margin: 5rem 0px;
+    ol{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        text-align: center;
+        padding: 0px 60px;
+        .principal{
+            font-size: 34px;
+            border-bottom: 1px solid #000000;
+        }
+        h3{
+            font-size: 34px;
+            border-bottom: 1px solid rgba(82, 82, 82, 0.479);
+            color: rgba(82, 82, 82, 0.479);
+        }
+    }
+}
