@@ -24,8 +24,6 @@
     .cantidad-producto-carro{
         margin-left: 30px;
     }
-}
-@media(max-width:992px){
     .container-product{
         flex-direction: column;
         align-items: center;
@@ -36,9 +34,41 @@
         padding: 5px;
         margin-top: 15px;
         border-radius: 5px;
-    }    
+    } 
+    .contenedor-footer{
+        grid-template-columns: 1fr 1fr;
+        text-align: start;
+        .pie-navegacion, .pie-contacto{
+            margin-bottom: 20px;
+        }
+    }
 }
 @media(max-width:576px){
+    .info-contacto, .formulario{
+        width: 95vw;
+    }
+    .formulario{
+        .enviar{
+            width: 90vw;
+        }
+        input, textarea{
+            width: 90vw; 
+        }
+    }
+    .info-contacto{
+        iframe{
+            width: 90vw;
+            height: 400px;
+        }
+    }
+    .contenedor-footer{
+        grid-template-columns: 1fr;
+        text-align: start;
+        ul{
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+    }
     .buy-product{
         width: 90vw;
     }
@@ -50,7 +80,33 @@
         .img-principal{
             width: 88vw;
         } 
-    }     
+    }
+    .target{
+        width: 100%;
+        border-bottom: 1px solid #cfcfcf9d;
+        box-shadow: 0px 5px 0px 0px #00000096 ;
+    }
+    .producto{
+        display: flex;
+        width: auto;
+        margin: 0;
+        border-radius: none;
+        align-items: start;
+        img{
+            width: 200px;
+            border-bottom: none;
+            border-radius: 0px;
+        }
+        .target-text{
+            margin-left: 0.5rem;
+            h4, h5, h6{
+                margin-top: 2rem;
+            }
+        }
+        .boton{
+            margin-top: 2rem;
+        }
+    }
 }
 @media(max-width:768px){
     .navegador{
@@ -123,53 +179,6 @@
         align-items: center;
         justify-content: space-between;
     }
-    
-}
-@media(max-width:1200px){
-    .container-contactanos{
-        flex-direction: column;
-        align-items: center;
-    }
-}
-@media(max-width:576px){
-    .info-contacto, .formulario{
-        width: 95vw;
-    }
-    .formulario{
-        .enviar{
-            width: 90vw;
-        }
-        input, textarea{
-            width: 90vw; 
-        }
-    }
-    .info-contacto{
-        iframe{
-            width: 90vw;
-            height: 400px;
-        }
-    }
-}
-@media(max-width:992px){
-    .contenedor-footer{
-        grid-template-columns: 1fr 1fr;
-        text-align: start;
-        .pie-navegacion, .pie-contacto{
-            margin-bottom: 20px;
-        }
-    }
-}
-@media(max-width:576px){
-    .contenedor-footer{
-        grid-template-columns: 1fr;
-        text-align: start;
-        ul{
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-    }
-}
-@media(max-width:768px){
     .whatsapp{
         bottom: 80px;
         right: 20px;
@@ -177,5 +186,12 @@
             object-fit: cover;
             width: 50px;
         }
-    }  
+    }
+    
+}
+@media(max-width:1200px){
+    .container-contactanos{
+        flex-direction: column;
+        align-items: center;
+    }
 }
