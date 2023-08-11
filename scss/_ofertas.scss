@@ -1,3 +1,36 @@
-.ofertas{
+.cont-contenedor-ofertas{
+    margin-top: 40px;
     display: flex;
+    justify-content: center;
+}
+.contenedor-ofertas{
+    border: 1px solid #f2f2f2;
+    box-shadow: -1px -2px 27px -8px rgba(82,82,82,0.75);
+    align-items: center;
+    .t-oferta{
+        margin-left: 10px;
+        h2{
+            width: fit-content;
+            padding: 4px 7px;
+            background: linear-gradient(90deg, rgba(240,135,45,1) 0%, rgba(245,151,70,1) 33%, rgba(246,190,139,1) 100%);
+            color: #f1f1f1;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+    }
+    justify-content: center;
+    align-items: center;
+    .anterior, .siguiente{
+        background-color: transparent;
+        border: none;
+        margin: 4px;
+        i{
+            font-size: 40px;
+        }
+    }
+    .ofertas{
+        display: flex;
+        .producto{
+            overflow: hidden;
+        }
+    }
 }

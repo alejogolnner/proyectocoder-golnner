@@ -81,30 +81,42 @@
             width: 88vw;
         } 
     }
-    .target{
-        width: 100%;
-        border-bottom: 1px solid #cfcfcf9d;
-        box-shadow: 0px 5px 0px 0px #00000096 ;
-    }
-    .producto{
-        display: flex;
-        width: auto;
-        margin: 0;
-        border-radius: none;
-        align-items: start;
-        img{
-            width: 200px;
-            border-bottom: none;
-            border-radius: 0px;
+    .container-target{
+        .target{
+            width: 100%;
+            border-bottom: 1px solid #cfcfcf9d;
+            box-shadow: 0px 5px 0px 0px #00000096 ;
         }
-        .target-text{
-            margin-left: 0.5rem;
-            h4, h5, h6{
+        .producto{
+            display: flex;
+            width: auto;
+            margin: 0;
+            border-radius: 0px;
+            align-items: start;
+            &:hover{
+                box-shadow: none;
+            }
+            img{
+                width: 200px;
+                border-bottom: 0px;
+                border-radius: 0px;
+                object-fit: cover;
+            }
+            .target-text{
+                margin-left: 0.5rem;
+                h4, h5, h6{
+                    margin-top: 2rem;
+                }
+            }
+            .boton{
                 margin-top: 2rem;
             }
         }
-        .boton{
-            margin-top: 2rem;
+    }
+    
+    .contenedor-ofertas{
+        .last1-mobile{
+            display: none;
         }
     }
 }
@@ -187,11 +199,18 @@
             width: 50px;
         }
     }
-    
+    .contenedor-ofertas{
+        .last-mobile{
+            display: none;
+        }
+    }
 }
 @media(max-width:1200px){
     .container-contactanos{
         flex-direction: column;
         align-items: center;
+    }
+    .contenedor-ofertas{
+        overflow: hidden;
     }
 }

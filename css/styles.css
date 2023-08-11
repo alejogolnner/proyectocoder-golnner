@@ -74,6 +74,44 @@ h1 {
   margin: 5px;
 }
 
+.cont-contenedor-ofertas {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-ofertas {
+  border: 1px solid #f2f2f2;
+  box-shadow: -1px -2px 27px -8px rgba(82, 82, 82, 0.75);
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-ofertas .t-oferta {
+  margin-left: 10px;
+}
+.contenedor-ofertas .t-oferta h2 {
+  width: fit-content;
+  padding: 4px 7px;
+  background: linear-gradient(90deg, rgb(240, 135, 45) 0%, rgb(245, 151, 70) 33%, rgb(246, 190, 139) 100%);
+  color: #f1f1f1;
+  font-family: "Merriweather Sans", sans-serif;
+}
+.contenedor-ofertas .anterior, .contenedor-ofertas .siguiente {
+  background-color: transparent;
+  border: none;
+  margin: 4px;
+}
+.contenedor-ofertas .anterior i, .contenedor-ofertas .siguiente i {
+  font-size: 40px;
+}
+.contenedor-ofertas .ofertas {
+  display: flex;
+}
+.contenedor-ofertas .ofertas .producto {
+  overflow: hidden;
+}
+
 .container-target {
   display: flex;
   justify-content: space-around;
@@ -528,31 +566,38 @@ h1 {
   .img-product .img-principal {
     width: 88vw;
   }
-  .target {
+  .container-target .target {
     width: 100%;
     border-bottom: 1px solid rgba(207, 207, 207, 0.6156862745);
     box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.5882352941);
   }
-  .producto {
+  .container-target .producto {
     display: flex;
     width: auto;
     margin: 0;
-    border-radius: none;
+    border-radius: 0px;
     align-items: start;
   }
-  .producto img {
-    width: 200px;
-    border-bottom: none;
-    border-radius: 0px;
+  .container-target .producto:hover {
+    box-shadow: none;
   }
-  .producto .target-text {
+  .container-target .producto img {
+    width: 200px;
+    border-bottom: 0px;
+    border-radius: 0px;
+    object-fit: cover;
+  }
+  .container-target .producto .target-text {
     margin-left: 0.5rem;
   }
-  .producto .target-text h4, .producto .target-text h5, .producto .target-text h6 {
+  .container-target .producto .target-text h4, .container-target .producto .target-text h5, .container-target .producto .target-text h6 {
     margin-top: 2rem;
   }
-  .producto .boton {
+  .container-target .producto .boton {
     margin-top: 2rem;
+  }
+  .contenedor-ofertas .last1-mobile {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -630,11 +675,17 @@ h1 {
     object-fit: cover;
     width: 50px;
   }
+  .contenedor-ofertas .last-mobile {
+    display: none;
+  }
 }
 @media (max-width: 1200px) {
   .container-contactanos {
     flex-direction: column;
     align-items: center;
+  }
+  .contenedor-ofertas {
+    overflow: hidden;
   }
 }
 
