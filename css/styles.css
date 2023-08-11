@@ -103,17 +103,11 @@ h1 {
   text-align: start;
   font-size: 18px;
 }
+.producto h4 {
+  margin-top: 5px;
+}
 .producto h5 {
-  color: rgba(51, 51, 51, 0.6235294118);
-}
-.producto .boton {
-  width: auto;
-  background-color: #F6BE8B;
-  border: 1px solid #333;
-  font-size: 18px;
-}
-.producto .boton:hover {
-  background-color: #f2a664;
+  opacity: 0.7;
 }
 
 .img-product {
