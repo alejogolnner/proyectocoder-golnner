@@ -1,5 +1,5 @@
 .contenedor-footer{
-    background-color: #E1DBA0;
+    background-color: $color-g;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -37,7 +37,7 @@
         img{
             object-fit: cover;
             width: 50px;
-            margin-top: 6px;
+            margin-top: 10px;
         }
     }
 }
@@ -45,6 +45,6 @@
     img{
         object-fit: cover;
         width: 37px;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 }
