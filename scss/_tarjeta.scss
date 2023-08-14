@@ -11,8 +11,8 @@
     border-radius: 5px 5px 0px 0px;
     background-color: #f5f5f5;
     &:hover{
-        transform: 0.5s;
-        box-shadow: 5px 5px 5px #999;
+        transition: 0.5s;
+        box-shadow: 5px 5px 5px #999; 
     }
     img{
         border-radius: 5px 5px 0px 0px;

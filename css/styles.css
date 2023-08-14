@@ -121,7 +121,7 @@ h1 {
   background-color: #f5f5f5;
 }
 .producto:hover {
-  transform: 0.5s;
+  transition: 0.5s;
   box-shadow: 5px 5px 5px #999;
 }
 .producto img {
@@ -391,9 +391,13 @@ h1 {
   width: 480px;
 }
 .formulario input {
-  height: 25px;
-  font-size: 15px;
+  font-size: 16px;
   padding-left: 10px;
+  transition: 0.4s;
+}
+.formulario input:focus {
+  font-size: 18px;
+  border: 1px solid #b1b0b0;
 }
 .formulario textarea {
   height: 150px;
@@ -479,6 +483,10 @@ h1 {
   position: fixed;
   bottom: 150px;
   right: 30px;
+  transition: 0.5s;
+}
+.whatsapp:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 1200px) {

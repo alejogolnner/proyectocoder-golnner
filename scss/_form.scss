@@ -17,12 +17,16 @@
         border-radius: 4px;
         background-color: $color-g;
         text-align: start;  
-        width: 480px;    
+        width: 480px;
     }
     input{
-        height: 25px;
-        font-size: 15px;
+        font-size: 16px;
         padding-left: 10px;
+        transition: 0.4s;
+        &:focus{
+            font-size: 18px;
+            border: 1px solid #b1b0b0;
+        } 
     }
     textarea{
         height: 150px;
