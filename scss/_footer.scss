@@ -3,8 +3,9 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: center;
+    padding-top: 8px;
     ul{
         li{
             font-weight: 300;

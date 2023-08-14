@@ -7,6 +7,40 @@
 .buy-product{
     width: 400px;
     padding-left: 20px;
+    .container-button{
+        .tamaño{
+            margin: 0px 20px 20px 0px;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            position: relative;
+            transition: 1s;
+            &:hover, &:focus{
+                border: 0px;
+            }
+            &::before{
+                content: "";
+                opacity: 0;
+                position: absolute;
+                top: 0px;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $color-o;
+                z-index: -2;
+            }
+            &:hover::before, &:focus::before{
+                opacity: 1;
+                animation-name: bola;
+                animation-duration: 0.9s;
+                animation-timing-function: cubic-bezier(.57,1.22,1,.96);
+            }
+        }
+    }
     h4, h5{
         text-align: start;
         margin-bottom: 20px;
@@ -20,32 +54,14 @@
             width: 40px;
         }
     }
-    .tamaño{
-        margin: 0px 20px 20px 0px;
-        border-radius: 100%;
-        width: 40px;
-        height: 40px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        font-size: 16px;
-        &:hover{
-            background-color: $color-o;
-        }
-        &:focus{
-            background-color: $color-o;
-        }
-    }
+    
     .buy-now, .agregar-carrito{
+        @extend %boton;
         width: 100%;
         height: 40px;
         margin-bottom: 20px;
-        background-color: $color-o;
-        border: 1px solid #333;
         border-radius: 4px;
         font-size: 18px;
-        &:hover{
-            background-color: #f2a664;
-        }
     }
 }
 

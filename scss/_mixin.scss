@@ -1,0 +1,7 @@
+@mixin inputGenerico($border,$color-g){
+    border: $border;
+    border-radius: 4px;
+    background-color: $color-g;
+    text-align: start;
+    padding: 5px 5px 5px 10px;  
+}

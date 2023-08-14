@@ -24,19 +24,16 @@
     }
     form {
         input{
+            @include inputGenerico ($border1,#fff);
             width: 300px;
             &:hover{
                 border: none;
             }
-            &:focus{
-                border: none;
-            }
         }
         button{
-            border: 1px solid #333;
+            @extend %boton;
             &:hover{
-                background-color: #f2a664;
-                border: 1px solid #333;
+                border: $border;
             }
         }
     }

@@ -6,6 +6,28 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.formulario .enviar, .siguiente-carro .boton, .buy-product .buy-now, .buy-product .agregar-carrito, .navegador form button {
+  background-color: #F6BE8B;
+  border: 1px solid #333;
+}
+.formulario .enviar:hover, .siguiente-carro .boton:hover, .buy-product .buy-now:hover, .buy-product .agregar-carrito:hover, .navegador form button:hover {
+  background-color: #f2a664;
+}
+
+@keyframes bola {
+  0% {
+    transform: translate(0px, -40px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  75% {
+    transform: translate(0px, -20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
 h1 {
   display: none;
 }
@@ -38,19 +60,17 @@ h1 {
   display: none;
 }
 .navegador form input {
+  border: 1px solid #bebebe;
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: start;
+  padding: 5px 5px 5px 10px;
   width: 300px;
 }
 .navegador form input:hover {
   border: none;
 }
-.navegador form input:focus {
-  border: none;
-}
-.navegador form button {
-  border: 1px solid #333;
-}
 .navegador form button:hover {
-  background-color: #f2a664;
   border: 1px solid #333;
 }
 .navegador .form-mobile {
@@ -114,7 +134,7 @@ h1 {
 }
 
 .producto {
-  width: 270px;
+  width: 17em;
   margin: 10px;
   padding: 10px;
   border-radius: 5px 5px 0px 0px;
@@ -129,6 +149,7 @@ h1 {
   border-bottom: 1px solid #333;
   padding-bottom: 5px;
   width: 100%;
+  height: 340.88px;
   object-fit: cover;
 }
 .producto h4, .producto h5, .producto h6 {
@@ -150,16 +171,6 @@ h1 {
   object-fit: cover;
   border-radius: 5px;
 }
-.img-product .img-preview {
-  display: flex;
-  justify-content: center;
-}
-.img-product .img-preview img {
-  object-fit: cover;
-  width: 80px;
-  height: 60px;
-  margin: 5px;
-}
 
 .container-product {
   display: flex;
@@ -171,6 +182,38 @@ h1 {
 .buy-product {
   width: 400px;
   padding-left: 20px;
+}
+.buy-product .container-button .tamaño {
+  margin: 0px 20px 20px 0px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  position: relative;
+  transition: 1s;
+}
+.buy-product .container-button .tamaño:hover, .buy-product .container-button .tamaño:focus {
+  border: 0px;
+}
+.buy-product .container-button .tamaño::before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F6BE8B;
+  z-index: -2;
+}
+.buy-product .container-button .tamaño:hover::before, .buy-product .container-button .tamaño:focus::before {
+  opacity: 1;
+  animation-name: bola;
+  animation-duration: 0.9s;
+  animation-timing-function: cubic-bezier(0.57, 1.22, 1, 0.96);
 }
 .buy-product h4, .buy-product h5 {
   text-align: start;
@@ -185,32 +228,12 @@ h1 {
 .buy-product h5 img {
   width: 40px;
 }
-.buy-product .tamaño {
-  margin: 0px 20px 20px 0px;
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-.buy-product .tamaño:hover {
-  background-color: #F6BE8B;
-}
-.buy-product .tamaño:focus {
-  background-color: #F6BE8B;
-}
 .buy-product .buy-now, .buy-product .agregar-carrito {
   width: 100%;
   height: 40px;
   margin-bottom: 20px;
-  background-color: #F6BE8B;
-  border: 1px solid #333;
   border-radius: 4px;
   font-size: 18px;
-}
-.buy-product .buy-now:hover, .buy-product .agregar-carrito:hover {
-  background-color: #f2a664;
 }
 
 .productos-similares {
@@ -227,7 +250,7 @@ h1 {
 .container-subtitulo .subtitulo-similares {
   border: 1px solid;
   border-radius: 20px;
-  background-color: #f5f5f5;
+  background-color: #E1DBA0;
   width: 400px;
   padding: 2px;
   font-size: 24px;
@@ -257,6 +280,7 @@ h1 {
 .contenedor-carro {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 55px;
 }
 
 .contenedor-producto-carro {
@@ -307,12 +331,7 @@ h1 {
 }
 .siguiente-carro .boton {
   width: 200px;
-  background-color: #F6BE8B;
-  border: 1px solid #333;
   font-size: 24px;
-}
-.siguiente-carro .boton:hover {
-  background-color: #f2a664;
 }
 
 .contenedor-subtotal {
@@ -369,45 +388,35 @@ h1 {
 }
 
 .formulario {
-  display: flex;
-  flex-direction: column;
-  justify-items: start;
   border: 1px solid #333;
   border-radius: 3px;
   width: 500px;
   margin: 20px;
   padding: 10px;
-  gap: 15px;
 }
-.formulario label {
-  display: flex;
-  justify-items: start;
-}
-.formulario input, .formulario textarea {
+.formulario input {
   border: 1px solid #333;
   border-radius: 4px;
   background-color: #E1DBA0;
   text-align: start;
+  padding: 5px 5px 5px 10px;
   width: 480px;
-}
-.formulario input {
   font-size: 16px;
-  padding-left: 10px;
-  transition: 0.4s;
-}
-.formulario input:focus {
-  font-size: 18px;
-  border: 1px solid #b1b0b0;
+  margin: 5px 0px 10px 0px;
 }
 .formulario textarea {
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #E1DBA0;
+  text-align: start;
+  padding: 5px 5px 5px 10px;
+  width: 480px;
   height: 150px;
 }
 .formulario .enviar {
   text-align: center;
   width: 480px;
   height: 45px;
-  background-color: #F6BE8B;
-  border: 1px solid #333;
   border-radius: 4px;
   font-size: 24px;
 }
@@ -415,10 +424,12 @@ h1 {
 .container-contactanos {
   display: flex;
   justify-content: center;
+  margin-bottom: 105px;
 }
 
 .info-contacto {
   border: 1px solid #333;
+  border-radius: 4px;
   width: 500px;
   padding: 10px;
   margin: 20px;
@@ -442,8 +453,9 @@ h1 {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 40px;
+  margin-top: 50px;
   text-align: center;
+  padding-top: 8px;
 }
 .contenedor-footer ul li {
   font-weight: 300;
@@ -689,7 +701,7 @@ h1 {
     box-shadow: none;
   }
   .container-target .producto img {
-    width: 150px;
+    width: 200px;
     border-bottom: 0px;
     border-radius: 0px;
     object-fit: cover;

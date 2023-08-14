@@ -1,15 +1,16 @@
 .contenedor-carro{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 55px;
 }
 
 .contenedor-producto-carro{
-    border-bottom: 1px solid #333;
+    border-bottom: $border;
     h2{
         margin-bottom: 40px;
         font-size: 28px;
         padding-bottom: 10px;
-        border-bottom: 1px solid #333;
+        border-bottom: $border;
     }
 }
 .producto-carro-descripcion{
@@ -47,12 +48,8 @@
 .siguiente-carro{
     margin: 20px 280px;
     .boton{
+        @extend %boton;
         width: 200px;
-        background-color: $color-o;
-        border: 1px solid #333;
         font-size: 24px;
-        &:hover{
-            background-color: #f2a664;
-        }
     }
 }
