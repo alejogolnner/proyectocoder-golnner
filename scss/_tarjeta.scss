@@ -13,7 +13,7 @@
     background-color: #f5f5f5;
     &:hover{
         transition: 0.5s;
-        box-shadow: 5px 5px 5px #999; 
+        box-shadow: $shadow; 
     }
     img{
         border-radius: 5px 5px 0px 0px;

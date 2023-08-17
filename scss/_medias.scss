@@ -201,7 +201,6 @@
         .target{
             width: 100%;
             border-bottom: 1px solid #cfcfcf9d;
-            box-shadow: 0px 5px 0px 0px #00000096 ;
         }
         .producto{
             display: flex;
@@ -213,15 +212,21 @@
                 box-shadow: none;
             }
             img{
-                width: 200px;
+                width: 150px;
+                height: 210px;
                 border-bottom: 0px;
                 border-radius: 0px;
                 object-fit: cover;
+                overflow: hidden;
             }
             .target-text{
                 margin-left: 0.5rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 h4, h5, h6{
-                    margin-top: 2rem;
+                    margin-top: 2em;
+                    
                 }
             }
             .boton{
