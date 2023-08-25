@@ -5,6 +5,7 @@
         display: flex;
         list-style: none;
         align-items: center;
+        text-align: center;
         justify-content: space-between;
         margin: 0rem 2rem;
         padding: 2px;
@@ -14,7 +15,26 @@
                 text-decoration: none;
                 color: #000000;
                 h6{
+                    margin-bottom: 0;
+                    width: fit-content;
                     font-size: 18px;
+                    position: relative;
+                    padding-bottom: 4px;
+                    cursor: pointer;
+                    &::after{
+                        content: "";
+                        width: 0;
+                        height: 3px;
+                        background-color: #fff;
+                        position: absolute;
+                        bottom: 0;
+                        right: 50%;
+                        transition: .5s;
+                    }
+                    &:hover::after{
+                        width: 100%;
+                        right: 0;
+                    }
                 }
                 .carro-txt{
                     display: none;

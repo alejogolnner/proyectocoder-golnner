@@ -10,13 +10,14 @@
     text-align: center;
     margin-top: 5em;
     .categoria{
+        margin: 2em 1em;
         h3{
             font-size: 2.5em;
         }
         .card-flip{
             border-radius: 10px;
             position: relative;
-            width: 22em;
+            width: 20em;
             height: 25em;
             &:hover .card-front{
                 transform: perspective(500px) rotateY(180deg);

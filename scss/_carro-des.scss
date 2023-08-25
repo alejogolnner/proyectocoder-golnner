@@ -46,8 +46,11 @@
     }
 }
 .siguiente-carro{
-    margin: 20px 280px;
+    display: flex;
+    justify-content: center;
     .boton{
+        margin: 10px;
+        border-radius: 3px;
         @extend %boton;
         width: 200px;
         font-size: 24px;

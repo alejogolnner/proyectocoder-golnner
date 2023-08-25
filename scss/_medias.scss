@@ -221,9 +221,9 @@
             }
             .target-text{
                 margin-left: 0.5rem;
-                white-space: nowrap;
                 overflow: hidden;
-                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-overflow: unset;
                 h4, h5, h6{
                     margin-top: 2em;
                     
