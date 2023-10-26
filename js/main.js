@@ -97,11 +97,26 @@ alert(primerUsuario.saludarUsuario())
 //muestro en consola al usuario
 console.log(primerUsuario);*/
 
-const TIPOS_RELLENO = ["Dulce de leche", "Crema", "Ganache de chocolate", "Frutillas", "Duraznos"];
-const VALORES_RELLENO = [800, 950, 1000, 1300, 1900];
-const TIPOS_BIZCOCHUELOS = ["CHOCOLATE", "VAINILLA"];
-const VALORES_BISCOCHUELOS = [5000, 4500];
-const VALORES_TAMANIOS_TORTAS = [5000, 4000, 3000];
+// Define un objeto que asocia los tipos de bizcochuelo con sus precios
+const tiposRellenoPrecios = {
+    "Dulcedeleche": 800,
+    "Crema": 950,
+    "Ganachedechocolate": 1000,
+    "Frutillas": 1300,
+    "Duraznos": 1900
+};
+
+const tiposBizcochueloPrecios = {
+    "Chocolate": 5000,
+    "Vainilla": 4500
+};
+
+// Valores de tamaños de tortas
+const tamañosTortaPrecios = {
+    18 : 3000,
+    20 : 4000,
+    24 : 500
+}
 
 // Función para calcular la ganancia
 const calcularGanancia = (total) => {
@@ -122,20 +137,20 @@ const recalcularTotal = () => {
     const tipoBizcochuelo = document.getElementById("tipoBizcochuelo").value;
     const cantRelleno = parseInt(document.getElementById("cantRelleno").value);
     const tipoRellenoOptions = document.getElementById("tipoRelleno").options;
-    const tipoRellenos = Array.from(tipoRellenoOptions).filter(option => option.selected).map(option => option.value.toUpperCase().replace(/\s/g, ""));
+    const tipoRellenos = Array.from(tipoRellenoOptions).filter(option => option.selected).map(option => option.value);
 
-    let acumulado = VALORES_TAMANIOS_TORTAS[tamanioTorta - 1];
-    acumulado += VALORES_BISCOCHUELOS[TIPOS_BIZCOCHUELOS.indexOf(tipoBizcochuelo)];
+    let acumulado = tamañosTortaPrecios[tamanioTorta];
+    acumulado += tiposBizcochueloPrecios[tipoBizcochuelo];
     for (const relleno of tipoRellenos) {
-        if (TIPOS_RELLENO.includes(relleno)) {
-            acumulado += VALORES_RELLENO[TIPOS_RELLENO.indexOf(relleno)];
+        if (tiposRellenoPrecios[relleno]) {
+            acumulado += tiposRellenoPrecios[relleno];
         }
     }
 
     actualizarTotal(acumulado);
 }
 
-// "Escuchar" cambios en los elementos del formulario
+// Escuchar cambios en los elementos del formulario
 document.getElementById("tamanioTorta").addEventListener("change", recalcularTotal);
 document.getElementById("tipoBizcochuelo").addEventListener("change", recalcularTotal);
 document.getElementById("cantRelleno").addEventListener("change", recalcularTotal);
@@ -147,13 +162,14 @@ document.getElementById("calcular-button").addEventListener("click", () => {
     const tipoBizcochuelo = document.getElementById("tipoBizcochuelo").value;
     const cantRelleno = parseInt(document.getElementById("cantRelleno").value);
     const tipoRellenoOptions = document.getElementById("tipoRelleno").options;
-    const tipoRellenos = Array.from(tipoRellenoOptions).filter(option => option.selected).map(option => option.value.toUpperCase().replace(/\s/g, ""));
+    const tipoRellenos = Array.from(tipoRellenoOptions).filter(option => option.selected).map(option => option.value);
 
-    let acumulado = VALORES_TAMANIOS_TORTAS[tamanioTorta - 1];
-    acumulado += VALORES_BISCOCHUELOS[TIPOS_BIZCOCHUELOS.indexOf(tipoBizcochuelo)];
+    // Calcular el costo total acumulado de la torta
+    let acumulado = tamañosTortaPrecios[tamanioTorta];
+    acumulado += tiposBizcochueloPrecios[tipoBizcochuelo];
     for (const relleno of tipoRellenos) {
-        if (TIPOS_RELLENO.includes(relleno)) {
-            acumulado += VALORES_RELLENO[TIPOS_RELLENO.indexOf(relleno)];
+        if (tiposRellenoPrecios[relleno]) {
+            acumulado += tiposRellenoPrecios[relleno];
         }
     }
 
