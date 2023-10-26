@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conéctate con nosotros para consultas y pedidos.">
-    <title>Envíos - Contacto</title>
+    <title>Presupuestos - tortas</title>
     <link rel="shortcut icon" href="../multimedia/logo-benchu.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../csss/styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,31 +34,50 @@
                 <li><a href="./carrito.html"><h6 class="carro-txt">Carrito</h6><img class="carrito-img" src="../multimedia/carrito-logo.png" alt="carrito"></a></li>
             </ul>
         </nav>
-        <h1>Contacto</h1>
+        <h1>Presupuestos</h1>
     </header>
-
-    <main>
-        <h2 class="subtitulo-contacto">Contactanos</h2>
-        <div class="container-contactanos">
-            <div class="info-contacto">
-                <h6><img src="../multimedia/telefono-logo.png" alt="telefono"> 11 4475-6360</h6>
-                <h6><img src="../multimedia/location.png" alt="ubicacion">Calle 208 N°268 - Berazategui</h6>
-                <h6><img class="email-logo" src="../multimedia/email-logo.png" alt="Email">pasteleria.benchu@gmail.com</h6>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.064119468245!2d-58.228677023422755!3d-34.804328668122125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a329aa08723c71%3A0x7fd3fb3d09ead9c8!2sPasteler%C3%ADa%20Benchu!5e0!3m2!1ses-419!2sar!4v1689022324728!5m2!1ses-419!2sar"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <main class="main-presupuestos">
+        <div class="contenedor-presupuesto">
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="tamanoTorta">Seleccione el tamaño de su torta</label>
+                <select class="form-select" id="tamanioTorta">
+                    <option value="18">18cm</option>
+                    <option value="20">20cm</option>
+                    <option value="24">24cm</option>
+                </select>
             </div>
-            <form class="formulario" method="post" name="formulario-contactanos">
-                <label for="nombre">Nombre :</label>
-                <input type="text"  name="nombre" id="nombre" placeholder="Ingrese su nombre">
-                <label for="telefono">Telefono : </label>
-                <input type="number" name="telefono" id="telefono" placeholder="11 1234-1234">
-                <label for="email">Email : </label>
-                <input type="email" name="email" id="email" placeholder="pasteleria.benchu@gmail.com">
-                <label for="comentario">Comentario :</label>
-                <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
-                <input class="enviar" type="submit" name="enviar" id="enviar">
-            </form>
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="tipoBizcochuelo">Seleccione el tipo de bizcochuelo</label>
+                <select class="form-select" id="tipoBizcochuelo">
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Vainilla">Vainilla</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="cantRelleno">Seleccione la cantidad de rellenos</label>
+                <select class="form-select" id="cantRelleno">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="tipoRelleno">Seleccione los tipos de rellenos</label>
+                <select class="form-select" id="tipoRelleno" multiple>
+                    <option value="Dulcedeleche">Dulce de leche</option>
+                    <option value="Crema">Crema</option>
+                    <option value="Ganachedechocolate">Ganache de chocolate</option>
+                    <option value="Frutillas">Frutillas</option>                    
+                    <option value="Duraznos">Duraznos</option>
+                </select>
+            </div>
+            <div>
+                <h2>Total acumulado: <strong id="total-acumulado">$0</strong></h2>
+            </div>
+            <button id="calcular-button">Calcular</button>
         </div>
-       
     </main>
     <footer class="pie-pagina">
         <div class="contenedor-footer">
@@ -98,5 +117,6 @@
             once: true
         });
     </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
